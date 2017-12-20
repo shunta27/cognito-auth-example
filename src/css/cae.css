@@ -21,7 +21,7 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  height: 400px;
+  height: 700px;
   text-align: center;
 }
 .center {
@@ -33,7 +33,7 @@ body {
   width: 300px;
 }
 .myPage {
-  width: 300px;
+  width: 400px;
 }
 .alert {
   color: #ff1744;

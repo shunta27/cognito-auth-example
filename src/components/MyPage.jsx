@@ -153,6 +153,7 @@ class MyPage extends React.Component {
       _this.refs.apiResponse.innerHTML = result.data.status;
     })
     .catch(function(result){
+      _this.refs.apiResponse.innerHTML = 'NG';
       //This is where you would put an error callback
       console.log(result);
     });
@@ -197,6 +198,7 @@ class MyPage extends React.Component {
       _this.refs.apiResponse_POST.innerHTML = result.data.status;
     })
     .catch(function(result){
+      _this.refs.apiResponse_POST.innerHTML = 'NG';
       //This is where you would put an error callback
       console.log(result);
     });
@@ -241,6 +243,7 @@ class MyPage extends React.Component {
       _this.refs.apiResponse_PUT.innerHTML = result.data.status;
     })
     .catch(function(result){
+      _this.refs.apiResponse_PUT.innerHTML = 'NG';
       //This is where you would put an error callback
       console.log(result);
     });
@@ -285,6 +288,7 @@ class MyPage extends React.Component {
       _this.refs.apiResponse_DELETE.innerHTML = result.data.status;
     })
     .catch(function(result){
+      _this.refs.apiResponse_DELETE.innerHTML = 'NG';
       //This is where you would put an error callback
       console.log(result);
     });
