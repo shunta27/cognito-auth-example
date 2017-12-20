@@ -11,6 +11,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { browserHistory } from 'react-router';
 import { CognitoUserPool, CognitoUser } from 'amazon-cognito-identity-js';
 import apigClientFactory from 'aws-api-gateway-client';
+import { getParamsBodyData, postParamsBodyData, putParamsBodyData, deleteParamsBodyData } from './InvokeConfig';
 
 //====================================================================================================
 // Component
@@ -121,10 +122,6 @@ class MyPage extends React.Component {
     let apigClient = apigClientFactory.newClient(apigClientConfig);
 
     let invokeConfig = {
-      //This is where any header, path, or querystring request params go. The key is the parameter named as defined in the API
-      params : {
-
-      },
       // Template syntax follows url-template https://www.npmjs.com/package/url-template
       pathTemplate : '/',
       method : 'GET',
@@ -134,19 +131,15 @@ class MyPage extends React.Component {
             Authorize: this.cognitoUser.signInUserSession.idToken.jwtToken
         }
       },
-      //This is where you define the body of the request
-      body : {
-
-      }
     };
 
     // Invoke
     apigClient.invokeApi(
-      invokeConfig.params,
+      getParamsBodyData.params,
       invokeConfig.pathTemplate,
       invokeConfig.method,
       invokeConfig.additionalParams,
-      invokeConfig.body)
+      getParamsBodyData.body)
     .then(function(result){
       //This is where you would put a success callback
       console.log(result);
@@ -170,9 +163,6 @@ class MyPage extends React.Component {
     let apigClient = apigClientFactory.newClient(apigClientConfig);
 
     let invokeConfig = {
-      params : {
-
-      },
       pathTemplate : '/',
       method : 'POST',
       additionalParams : {
@@ -180,18 +170,15 @@ class MyPage extends React.Component {
             Authorize: this.cognitoUser.signInUserSession.idToken.jwtToken
         }
       },
-      body : {
-
-      }
     };
 
     // Invoke
     apigClient.invokeApi(
-      invokeConfig.params,
+      postParamsBodyData.params,
       invokeConfig.pathTemplate,
       invokeConfig.method,
       invokeConfig.additionalParams,
-      invokeConfig.body)
+      postParamsBodyData.body)
     .then(function(result){
       //This is where you would put a success callback
       console.log(result);
@@ -215,9 +202,6 @@ class MyPage extends React.Component {
     let apigClient = apigClientFactory.newClient(apigClientConfig);
 
     let invokeConfig = {
-      params : {
-
-      },
       pathTemplate : '/',
       method : 'PUT',
       additionalParams : {
@@ -225,18 +209,15 @@ class MyPage extends React.Component {
             Authorize: this.cognitoUser.signInUserSession.idToken.jwtToken
         }
       },
-      body : {
-
-      }
     };
 
     // Invoke
     apigClient.invokeApi(
-      invokeConfig.params,
+      putParamsBodyData.params,
       invokeConfig.pathTemplate,
       invokeConfig.method,
       invokeConfig.additionalParams,
-      invokeConfig.body)
+      putParamsBodyData.body)
     .then(function(result){
       //This is where you would put a success callback
       console.log(result);
@@ -260,9 +241,6 @@ class MyPage extends React.Component {
     let apigClient = apigClientFactory.newClient(apigClientConfig);
 
     let invokeConfig = {
-      params : {
-
-      },
       pathTemplate : '/',
       method : 'DELETE',
       additionalParams : {
@@ -270,18 +248,15 @@ class MyPage extends React.Component {
             Authorize: this.cognitoUser.signInUserSession.idToken.jwtToken
         }
       },
-      body : {
-
-      }
     };
 
     // Invoke
     apigClient.invokeApi(
-      invokeConfig.params,
+      deleteParamsBodyData.params,
       invokeConfig.pathTemplate,
       invokeConfig.method,
       invokeConfig.additionalParams,
-      invokeConfig.body)
+      deleteParamsBodyData.body)
     .then(function(result){
       //This is where you would put a success callback
       console.log(result);
