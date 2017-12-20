@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+require('dotenv').config();
 
 module.exports = {
   entry: {
@@ -57,9 +58,9 @@ module.exports = {
       'process.env.COGNITO_IDENTITY_POOL_ID': JSON.stringify(process.env.COGNITO_IDENTITY_POOL_ID),
       'process.env.COGNITO_USER_POOL_ID': JSON.stringify(process.env.COGNITO_USER_POOL_ID),
       'process.env.COGNITO_APP_CLIENT_ID': JSON.stringify(process.env.COGNITO_APP_CLIENT_ID),
-      'process.env.INVOKE_URL': JSON.stringify(process.env.INVOKE_URL),
       'process.env.DEFAULT_USERNAME': JSON.stringify(process.env.DEFAULT_USERNAME),
-      'process.env.DEFAULT_PASSWORD': JSON.stringify(process.env.DEFAULT_PASSWORD)
+      'process.env.DEFAULT_PASSWORD': JSON.stringify(process.env.DEFAULT_PASSWORD),
+      'process.env.INVOKE_URL': JSON.stringify(process.env.INVOKE_URL),
     })
   ]
 }
