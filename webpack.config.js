@@ -60,7 +60,10 @@ module.exports = {
       'process.env.COGNITO_APP_CLIENT_ID': JSON.stringify(process.env.COGNITO_APP_CLIENT_ID),
       'process.env.DEFAULT_USERNAME': JSON.stringify(process.env.DEFAULT_USERNAME),
       'process.env.DEFAULT_PASSWORD': JSON.stringify(process.env.DEFAULT_PASSWORD),
-      'process.env.INVOKE_URL': JSON.stringify(process.env.INVOKE_URL),
+      'process.env.INVOKE_URL_GET': JSON.stringify(process.env.INVOKE_URL_GET),
+      'process.env.INVOKE_URL_POST': JSON.stringify(process.env.INVOKE_URL_POST),
+      'process.env.INVOKE_URL_PUT': JSON.stringify(process.env.INVOKE_URL_PUT),
+      'process.env.INVOKE_URL_DELETE': JSON.stringify(process.env.INVOKE_URL_DELETE),
     })
   ]
 }
