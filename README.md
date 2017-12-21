@@ -6,7 +6,7 @@ Cognito Authentication Example w/ React
 ## Clone repository
 
 ```bash
-$ git clone https://github.com/DaisukeOtaka/cognito-auth-example.git
+$ git clone git@github.com:shunta27/cognito-auth-example.git
 ```
 
 ## Install Required Packages
@@ -18,26 +18,24 @@ $ npm install
 
 # Usage
 
-## Environment Varilables
+## Environment Varilables(.env.default)
 - PORT: (Optional) Express Port Number
 - REGION: AWS Cognito Region
 - COGNITO_IDENTITY_POOL_ID: Cognito Identity Pool ID
 - COGNITO_USER_POOL_ID: User Pool ID
 - COGNITO_APP_CLIENT_ID: App Client ID
-- INVOKE_URL: AWS API Gateway Invoke URL
 - DEFAULT_USERNAME: Default Username for Sign In
 - DEFAULT_PASSWORD: Default Password for Sign In
+- INVOKE_URL_GET: AWS API Gateway Invoke URL
+- INVOKE_URL_POST: AWS API Gateway Invoke URL
+- INVOKE_URL_PUT: AWS API Gateway Invoke URL
+- INVOKE_URL_DELETE: AWS API Gateway Invoke URL
 
 ## Run
 
 ```bash
-$ npm start
+$ npm run start
 ```
+## Contributors
 
-# Screenshots
-
-## Sign In
-![Sign In](https://raw.githubusercontent.com/DaisukeOtaka/cognito-auth-example/images/images/SignIn.png)
-
-## My Page
-![My Page](https://raw.githubusercontent.com/DaisukeOtaka/cognito-auth-example/images/images/MyPage.png)
+ichikawa shunta <shunta27ichikawa@gmail.com>
